@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Prácticas de Grid</title>
+
+    <!-- Estos dos de http://getbootstrap.com/getting-started/ -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <style>
+    .row div{
+      border: 1px solid black;
+    }
+  </style>
+  </head>
+  <body>
+   <div class="container">
+   <h1> Práctica de Grid </h1>
+    <div class="row">
+      <div class="col-sm-12 col-md-6">Esta columna va a abarcar todo el ancho</div>
+      <div class="col-sm-12 col-md-6">Este es otro contenido</div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 col-sm-6">1</div>
+      <div class="col-md-3 col-sm-6">2</div>
+      <div class="col-md-3 col-sm-6">3</div>
+      <div class="col-md-3 col-sm-6">4</div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 col-xs-12">Elem 1</div>
+      <div class="col-md-4 col-xs-12">Elem 2</div>
+      <div class="col-md-4 col-xs-12">Elem 3</div>
+    </div>
+    <div class"row">
+      <div class="col-md-6 col-md-offset-3">
+      Este contenido va centrado.
+     <br>
+     Media queries
+     <button class="btn btn-success" id="btn_saludar">Saludar</button>
+     <button class="btn btn-danger" id="btn_despedir">Despedir</button>
+     <button class="btn btn-primary" id="btn_desaparecer">Desaparecer</button>
+     <div id="res"></div>
+     <div id="content" style="background-color: red; color: white; height: 200px;">
+       Esto va a desaparecer.
+     </div>
+      </div>
+    </div>
+
+   </div>
+   <script
+     src="http://code.jquery.com/jquery-3.1.1.js"
+     integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+     crossorigin="anonymous"></script>
+
+<script>
+     function saludar_handler(){
+       $("#res").html("Hola Cinta Blanca");
+     }
+
+     $(function(){
+       console.log("La pagina esta lista")
+       $('#btn_saludar').click(saludar_handler);
+       $('#btn_despedir').click(function(){
+         $("#res").html("Nos quedan 2.5 semanas");
+       });
+
+      $('#btn_desaparecer').click(function(){
+        $('#content').fadeToggle();
+      });
+     });
+
+     </script>
+  </body>
+</html>
