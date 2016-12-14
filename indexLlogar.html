@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Prácticas de Grid</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <style>
+
+    *{color: #030752;}
+
+    h3 {
+      font-weight: bold;
+      }
+
+    h2 {
+        font-weight: bold;
+        }
+
+
+
+    .header-imagen {
+      width: 100px;
+      padding-bottom: 10px;
+      padding-top: 10px
+    }
+
+
+        .nav-justified {
+            background-color: #eee;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .nav-justified>li>a {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-bottom: 0;
+            font-weight: bold;
+            color: #030752;
+            text-align: center;
+            background-color: #e5e5e5;
+            /* Old browsers */
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e5e5e5));
+            background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%);
+            background-image: -o-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%);
+            background-image: linear-gradient(to bottom, #f5f5f5 0%, #e5e5e5 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#e5e5e5', GradientType=0);
+            /* IE6-9 */
+            background-repeat: repeat-x;
+            /* Repeat the gradient */
+            border-bottom: 1px solid #d5d5d5;
+        }
+
+        .nav-justified>.active>a,
+        .nav-justified>.active>a:hover,
+        .nav-justified>.active>a:focus {
+            background-color: #ddd;
+            background-image: none;
+            -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, .15);
+            box-shadow: inset 0 3px 7px rgba(0, 0, 0, .15);
+        }
+
+        .nav-justified>li:first-child>a {
+            border-radius: 5px 5px 0 0;
+        }
+
+        .nav-justified>li:last-child>a {
+            border-bottom: 0;
+            border-radius: 0 0 5px 5px;
+        }
+
+        @media (min-width: 768px) {
+            .nav-justified {
+                max-height: 52px;
+            }
+            .nav-justified>li>a {
+                border-right: 1px solid #d5d5d5;
+                border-left: 1px solid #fff;
+            }
+            .nav-justified>li:first-child>a {
+                border-left: 0;
+                border-radius: 5px 0 0 5px;
+            }
+            .nav-justified>li:last-child>a {
+                border-right: 0;
+                border-radius: 0 5px 5px 0;
+            }
+
+        }
+
+        @font-face {
+            font-family: "naiv_normal";
+            src: url(css/fonts/naiv_normal-webfont.ttf) format("truetype"), url(css/fonts/naiv_normal-webfont.eot) format("embedded-opentype"), url(css/fonts/naiv_bold-webfont.ttf) format("truetype"), url(css/fonts/naiv_bold-webfont.eot) format("embedded-opentype");
+
+        }
+
+        h2,
+        h3,
+        h4,
+        li,
+        a,
+        p {
+            font-family: "naiv_normal", Helvetica, Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="masthead">
+          <div class="row">
+          <div class="col-sm-2">
+          <img class="icon header-imagen" src="./OuiShare_files/OuiSh.png"></div>
+            <h3 class="text-center col-sm-8">OuiShare México</h3>
+          </div>
+
+            <nav>
+                <ul class="nav nav-justified">
+                    <li class="dropdown"><a href="#">Home</a></li>
+                    <!-- <ul class="dropdown-toggle"></ul>
+          <li>Opción 1</li>
+          <li>Opción 2</li>
+          <li>Opción 3</li>
+          <li>Opción 4</li> -->
+                    <li class="dropdown"><a href="#">¿Quienes somos?</a></li>
+                    <!-- <ul class="dropdown-toggle"></ul>
+          <li>Opción 1</li>
+          <li>Opción 2</li>
+          <li>Opción 3</li>
+          <li>Opción 4</li> -->
+                    <li class="dropdown"><a href="#">Nuestras Acciones</a></li>
+                    <!-- <ul class="dropdown-toggle"></ul>
+          <li>Opción 1</li>
+          <li>Opción 2</li>
+          <li>Opción 3</li>
+          <li>Opción 4</li> -->
+                    <li class="dropdown"><a href="#">Nuestros Aliados</a></li>
+                    <!-- <ul class="dropdown-toggle"></ul>
+          <li>Opción 1</li>
+          <li>Opción 2</li>
+          <li>Opción 3</li>
+          <li>Opción 4</li> -->
+                    <li class="dropdown"><a href="#">Blog</a></li>
+                    <!-- <ul class="dropdown-toggle"></ul>
+          <li>Opción 1</li>
+          <li>Opción 2</li>
+          <li>Opción 3</li>
+          <li>Opción 4</li> -->
+                    <li class="dropdown"><a href="#">Contacto</a></li>
+                    <!-- <ul class="dropdown-toggle"></ul>
+          <li>Opción 1</li>
+          <li>Opción 2</li>
+          <li>Opción 3</li>
+          <li>Opción 4</li> -->
+                </ul>
+            </nav>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+
+                <h2 class="text-center">¿Qué es OuiShare?</h2>
+                <hr class="hr-large blue">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <div class="col-md-3 col-sm-6">
+                    <div class="box center">
+                        <a href="/es" target="_blank"><img class="icon" src="https://ouishare.s3.amazonaws.com/uploads/what_is_section/image1/4/activities.png">
+                            <h3 class="text-center">Actividades</h3>
+                            <hr class="blue hr-low">
+                        </a>
+                        <h4 class="text-justify"><p>Las actividades van desde la investigación y la formación de comunidades a los servicios y proyectos independientes.</p></h4></div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="box center">
+                        <a href="/es" target="_blank"><img class="icon" src="https://ouishare.s3.amazonaws.com/uploads/what_is_section/image2/4/values.png">
+                            <h3 class="text-center">Valores</h3>
+                            <hr class="blue hr-low">
+                        </a>
+                        <h4 class="text-justify"><p>Nuestras acciones son guiadas por un manifiesto de 10 valores, establecida por la comunidad.</p></h4></div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="box center">
+                        <a href="/es" target="_blank"><img class="icon" src="https://ouishare.s3.amazonaws.com/uploads/what_is_section/image3/4/teams.png">
+                            <h3 class="text-center">Equipo</h3>
+                            <hr class="blue hr-low">
+                        </a>
+                        <h4 class="text-justify"><p>Nuestra organización está conformada por muchas personas apasionadas de diversas partes del mundo. Únete al equipo.</p></h4></div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="box center">
+                        <a href="/es" target="_blank"><img class="icon" src="https://ouishare.s3.amazonaws.com/uploads/what_is_section/image4/4/events.png">
+                            <h3 class="text-center">Eventos</h3>
+                            <hr class="blue hr-low">
+                        </a>
+                        <h4 class="text-justify"><p>¿Le gustaría reunirse con nosotros en persona o involucrarse más? Únase a nosotros en el próximo evento en su ciudad.</p></h4></div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="blog-footer">
+            <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            <p>
+                <a href="#">Back to top</a>
+            </p>
+        </footer>
+    </div>
+    <script src="http://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+
+
+
+    <script>
+    </script>
+
+
+</body>
+
+</html>
